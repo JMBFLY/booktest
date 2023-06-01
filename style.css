@@ -131,32 +131,27 @@ body {
     top: 0px;
     right: 0px;
     z-index: 10;
+    background-color: white;
 }
 
-.cover {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background-color: aliceblue;
-}
-
-.photo {
-    width: 100%;
-    height: 100%;
+.polaroid:before {
+    content: "";
     display: block;
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    border: 2px solid black;
-    margin-bottom: 10px;
+    width: 90%;
+    height: 80%;
+    margin: 5%;
+    background: var(--image) center center no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 5px rgba(#222, .35);
+    border-radius: 2px;
 }
 
-.lpt {
-    width: 100%;
-    right: 0px;
-    position: absolute;
-    bottom: 5%;
-    border: 2px solid black;
-    line-height: 10px;
-    font-size: 1vw;
+.polaroid:after {
+    display: block;
+    content: var(--caption);
+    font-weight: 500;
+    color: #555;
+    font-size: 2vmin;
+    opacity: .75;
+    text-align: center;
 }
